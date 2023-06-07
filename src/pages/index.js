@@ -61,14 +61,14 @@ export default function Home() {
           <p className="mb-8 font-merriweather">
             At Bulls Eye Events, our mission is to design and deliver unique,
             unforgettable private club events that stand out and leave a lasting
-            impression. We strive to innovate and cater to our clients'
+            impression. We strive to innovate and cater to our clients
             distinctive tastes, integrating our deep understanding of culture,
             style, and trends. Our dedication lies in turning every occasion
             into a remarkable experience, one that embodies the essence of the
             client while surprising and delighting their guests. With our
             meticulous planning, attention to detail, and personalized touch, we
-            aim to bring our clients' visions to life in a manner that
-            transcends their expectations.
+            aim to bring our clients visions to life in a manner that transcends
+            their expectations.
           </p>
           <h2 className="text-2xl font-bold mb-4 font-oswald">Vision</h2>
           <p className="font-merriweather">
