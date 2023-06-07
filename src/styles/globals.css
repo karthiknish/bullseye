@@ -25,3 +25,9 @@ body {
     )
     rgb(var(--background-start-rgb));
 }
+.font-merriweather {
+  font-family: "Merriweather", serif;
+}
+.font-oswald{
+  font-family: "Oswald", sans-serif;
+}
