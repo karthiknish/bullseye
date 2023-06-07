@@ -1,4 +1,5 @@
 import Head from "next/head";
+import Image from "next/image";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/swiper-bundle.min.css";
 import SwiperCore, { Navigation } from "swiper";
@@ -21,7 +22,13 @@ export default function Home() {
         animate={{ y: 0, opacity: 1 }}
         className="flex flex-col items-center justify-center min-h-screen py-2"
       >
-        <img alt="Bulls Eye Events" src={bullslogo.src} />
+        <Image
+          width={200}
+          height={200}
+          alt="Bulls Eye Events"
+          src={bullslogo.src}
+          priority={true}
+        />
         <a href="https://book.stripe.com/eVaaET4oG6VbaC47sC" target="_blank">
           <motion.div
             whileHover={{
@@ -30,7 +37,10 @@ export default function Home() {
             }}
             className="flex flex-col md:flex-row w-full md:w-2/3 gap-3 md:mx-10 items-center my-2"
           >
-            <img
+            <Image
+              width={500}
+              height={500}
+              priority={true}
               src={bollywood.src}
               alt="Upcoming event"
               className="object-cover md:w-1/2 w-full h-full rounded-md shadow-lg"
