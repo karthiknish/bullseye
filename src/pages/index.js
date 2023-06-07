@@ -45,7 +45,7 @@ export default function Home() {
               <p>
                 Ignite your night with the vibrant glow of our Bollywood Neon
                 Party on June 16th, starting at 10 PM at the stylish Peacock
-                Bar! Presented by Bull's Eye Events, this event marries
+                Bar! Presented by Bulls Eye Events, this event marries
                 traditional Bollywood with contemporary neon aesthetics,
                 creating a vibrant, unforgettable spectacle.
               </p>
