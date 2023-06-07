@@ -6,21 +6,42 @@ import bullslogo from "../../images/bulls-logo.png";
 import image1 from "../../images/image1.jpg";
 import image2 from "../../images/image2.jpg";
 import image3 from "../../images/image3.jpg";
+import bollywood from "../../images/bollywood.png";
+import { motion } from "framer-motion";
 SwiperCore.use([Navigation]);
 export default function Home() {
-  const images = [image1, image2, image3, "/images/image4.jpg"];
+  const images = [image1, image2, image3];
   return (
     <>
       <Head>
         <title>Bulls eye events</title>
       </Head>
-      <div className="flex flex-col items-center justify-center min-h-screen py-2">
+      <motion.div
+        initial={{ y: -20, opacity: 0.5 }}
+        animate={{ y: 0, opacity: 1 }}
+        className="flex flex-col items-center justify-center min-h-screen py-2"
+      >
         <img alt="Bulls Eye Events" src={bullslogo.src} />
-
+        <motion.div
+          whileHover={{
+            scale: 1.02,
+            transition: { duration: 0.2 },
+          }}
+          className="flex w-full md:w-2/3 gap-3 items-center my-2"
+        >
+          <img
+            src={bollywood.src}
+            alt="Upcoming event"
+            className="object-cover w-1/2 h-full"
+          />
+          <p className="text-4xl font-mono">Bollywood Neon Party</p>
+        </motion.div>
         <Swiper
           spaceBetween={50}
           slidesPerView={1}
+          loop
           navigation
+          autoplay={{ delay: 1000 }}
           onSlideChange={() => console.log("slide change")}
           onSwiper={(swiper) => console.log(swiper)}
           className="w-full h-96"
@@ -64,7 +85,7 @@ export default function Home() {
           </p>
         </div>
         {/* Rest of the webpage content goes here. */}
-      </div>
+      </motion.div>
     </>
   );
 }
