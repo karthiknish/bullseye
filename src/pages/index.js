@@ -3,28 +3,54 @@ import Image from "next/image";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/swiper-bundle.min.css";
 import SwiperCore, { Navigation } from "swiper";
+import { FaInstagram } from "react-icons/fa";
 import bullslogo from "../../images/bulls-logo.png";
 import image1 from "../../images/image1.jpg";
 import image2 from "../../images/image2.jpg";
 import image3 from "../../images/image3.jpg";
 import bollywood from "../../images/bollywood.png";
 import { motion } from "framer-motion";
+import { Router } from "next/router";
 SwiperCore.use([Navigation]);
 export default function Home() {
   const images = [image1, image2, image3];
   return (
     <>
       <Head>
-        <title>Bulls eye events</title>
+        <title>Bulls Eye Events</title>
+        <meta
+          name="description"
+          content="Bulls Eye Events - Crafting unforgettable private club events. Bollywood Parties every month."
+        />
+        <meta
+          name="keywords"
+          content="Bulls Eye Events, Private Club Events, Event Planning, Premium Events, Bollywood"
+        />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <script
+          async
+          src={`https://www.googletagmanager.com/gtag/js?id=G-YKFCG6JC0H`}
+        />
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag("js", new Date());
+
+            gtag("config", "G-YKFCG6JC0H");
+        `,
+          }}
+        />
       </Head>
       <motion.div
         initial={{ y: -20, opacity: 0.5 }}
         animate={{ y: 0, opacity: 1 }}
-        className="flex flex-col items-center justify-center min-h-screen py-2"
+        className="flex flex-col items-center justify-center min-h-screen pt-2"
       >
         <Image
-          width={200}
-          height={200}
+          width={300}
+          height={300}
           alt="Bulls Eye Events"
           src={bullslogo.src}
           priority={true}
@@ -77,7 +103,9 @@ export default function Home() {
         >
           {images.map((img, idx) => (
             <SwiperSlide key={idx}>
-              <img
+              <Image
+                width={500}
+                height={500}
                 src={img.src}
                 alt={`Slide ${idx}`}
                 className="w-full h-full object-cover"
@@ -113,7 +141,20 @@ export default function Home() {
             contributing to the evolution of the event planning landscape.
           </p>
         </div>
-        {/* Rest of the webpage content goes here. */}
+        <footer className="w-full flex justify-between items-center bg-gray-800 text-white p-4 mt-10">
+          <div>
+            <a
+              href="https://www.instagram.com/bulls.eye.events/"
+              target="_blank"
+              className="text-white hover:text-blue-500"
+            >
+              <FaInstagram size={24} />
+            </a>
+          </div>
+          <div>
+            <p>&copy; 2023 Bulls Eye Events. All rights reserved.</p>
+          </div>
+        </footer>
       </motion.div>
     </>
   );
