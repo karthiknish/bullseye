@@ -22,20 +22,39 @@ export default function Home() {
         className="flex flex-col items-center justify-center min-h-screen py-2"
       >
         <img alt="Bulls Eye Events" src={bullslogo.src} />
-        <motion.div
-          whileHover={{
-            scale: 1.02,
-            transition: { duration: 0.2 },
-          }}
-          className="flex w-full md:w-2/3 gap-3 items-center my-2"
-        >
-          <img
-            src={bollywood.src}
-            alt="Upcoming event"
-            className="object-cover w-1/2 h-full"
-          />
-          <p className="text-4xl font-mono">Bollywood Neon Party</p>
-        </motion.div>
+        <a href="https://book.stripe.com/eVaaET4oG6VbaC47sC" target="_blank">
+          <motion.div
+            whileHover={{
+              scale: 1.02,
+              transition: { duration: 0.2 },
+            }}
+            className="flex flex-col md:flex-row w-full md:w-2/3 gap-3 md:mx-10 items-center my-2"
+          >
+            <img
+              src={bollywood.src}
+              alt="Upcoming event"
+              className="object-cover md:w-1/2 w-full h-full rounded-md shadow-lg"
+            />
+            <div className="flex flex-col gap-2 md:w-1/2 mx-10 my-2">
+              <p className="rounded-full border px-2 bg-cyan-600 border-cyan-600 self-start">
+                Upcoming party
+              </p>
+              <p className="text-4xl font-robotoslab mb-4">
+                Bollywood Neon Party
+              </p>
+              <p>
+                Ignite your night with the vibrant glow of our Bollywood Neon
+                Party on June 16th, starting at 10 PM at the stylish Peacock
+                Bar! Presented by Bull's Eye Events, this event marries
+                traditional Bollywood with contemporary neon aesthetics,
+                creating a vibrant, unforgettable spectacle.
+              </p>
+              <button className="bg-red-600 text-white rounded-lg shadow-lg p-2 self-start mt-4">
+                Book Now
+              </button>
+            </div>
+          </motion.div>
+        </a>
         <Swiper
           spaceBetween={50}
           slidesPerView={1}

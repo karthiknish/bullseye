@@ -12,6 +12,10 @@ export default function Document() {
         href="https://fonts.googleapis.com/css2?family=Oswald&display=swap"
         rel="stylesheet"
       ></link>
+      <link
+        href="https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap"
+        rel="stylesheet"
+      ></link>
       <body>
         <Main />
         <NextScript />
